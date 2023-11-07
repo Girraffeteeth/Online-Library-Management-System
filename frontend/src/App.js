@@ -1,5 +1,5 @@
 import './App.css';
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import CreateBook from './components/CreateBook';
