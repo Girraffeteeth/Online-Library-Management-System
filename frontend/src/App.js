@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
+import CreateBook from './components/CreateBook';
+import BookLog from './components/BookLog';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="container">
+      <HashRouter>
+        <Nav/>
+        <Routes>
+          <Route path="/" element={<CreateBook/>}/>
+          <Route path="/create-book" element={<CreateBook/>}/>
+          <Route path="/book-log" element={<BookLog/>}/>
+        </Routes>
+      </HashRouter>
     </div>
   );
 }
